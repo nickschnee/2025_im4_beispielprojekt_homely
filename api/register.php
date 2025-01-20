@@ -6,11 +6,12 @@ header('Content-Type: application/json');
 require_once '../system/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name     = trim($_POST['name'] ?? '');
     $email    = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
 
-    if (!$email || !$password) {
-        echo json_encode(["status" => "error", "message" => "Email and password are required"]);
+    if (!$name || !$email || !$password) {
+        echo json_encode(["status" => "error", "message" => "Name, email and password are required"]);
         exit;
     }
 
@@ -25,9 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert the new user
-    $insert = $pdo->prepare("INSERT INTO users (email, password) VALUES (:email, :pass)");
+    // Insert the new user with name
+    $insert = $pdo->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :pass)");
     $insert->execute([
+        ':name'  => $name,
         ':email' => $email,
         ':pass'  => $hashedPassword
     ]);
