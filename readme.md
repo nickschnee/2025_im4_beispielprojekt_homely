@@ -8,7 +8,7 @@ Es ermöglicht Benutzern das `Registrieren`, `Anmelden`, `Abmelden` und den Zugr
 
 ## ⚙️ Installation
 
-Um dieses Boilerplate auf dem eigenen Web-Server zu installieren, führe folgende Schritte aus:
+Um dieses Beispiel-Projekt auf dem eigenen Web-Server zu installieren, führe folgende Schritte aus:
 
 ### 1. Download
 

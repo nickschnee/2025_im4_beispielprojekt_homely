@@ -2,25 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Login</h1>
-
-    <form id="loginForm">
-      <div>
-        <label>Email</label>
-        <input type="email" id="email" required />
+    <div class="login-container">
+      <h1 class="login-header">Login</h1>
+      <div class="brand">
+        <h2 class="brand-title">Homely</h2>
       </div>
-      <div>
-        <label>Password</label>
-        <input type="password" id="password" required />
-      </div>
-      <button type="submit">Login</button>
-    </form>
-
-    <p>Don’t have an account? <a href="register.html">Register here</a>.</p>
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-input"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button type="submit" class="form-button">
+          Anmelden oder registrieren
+        </button>
+      </form>
+    </div>
 
     <script src="js/login.js"></script>
   </body>
