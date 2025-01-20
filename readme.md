@@ -1,6 +1,6 @@
-# 🔑👤 Authentifizierung Minimal (Boilerplate)
+# 🏠 Homely Beispiel-Projekt
 
-> 🎨 Dieses Boilerplate kann entweder in einem Code-Along Schritt für Schritt gemeinsam erarbeitet werden oder fixfertig auf einem Webserver installiert werden.
+> 🎨 Blablabla
 
 Dieses Repository beinhaltet ein vollständiges, minimales Authenzifizierungs-System basierend auf PHP als Backend und HTML/CSS/JS als Frontend.
 
@@ -29,38 +29,3 @@ Um dieses Boilerplate auf dem eigenen Web-Server zu installieren, führe folgend
 ### 4. FTP Connect
 
 - Erstelle eine neue FTP Verbindung mit dem SFTP Plugin gemäss [Anleitung im MMP 101](https://github.com/Interaktive-Medien/101-MMP/blob/main/resources/sftp.md).
-
-# 📁 Struktur
-
-## 🎨 Frontend
-
-### root (Basis-Verzeichnis)
-
-- beinhaltet alle HTML-Dateien des Frontends.
-- beinhaltet die `.gitignore` Datei, welche die Dateien und Verzeichnisse ausblendet, die nicht auf GitHub hochgeladen werden sollen.
-
-### js
-
-- beinhaltet alle JavaScript-Dateien des Frontends.
-
-### css
-
-- beinhaltet alle CSS-Dateien des Frontends.
-
-## 🤖 Backend
-
-### api
-
-- Beinhaltet alle API-Endpunkte des Backends.
-- Diese Dateien werden von `JavaScript` aufgerufen und geben eine Antwort an `JavaScript` zurück.
-
-### middleware
-
-- Beinhaltet die Datei `auth.php`, die sicherstellt, dass Benutzer authentifiziert sind, bevor eine geschützte Seite aufgerufen werden kann.
-- Diese Dateien werden von `PHP` aufgerufen und geben eine Antwort an `PHP` zurück.
-
-### system
-
-- Beinhaltet die Konfigurationsdatei für die Datenbankverbindung.
-- Beinhaltet die Datei `database.sql`, die die `users` Tabelle erstellt.
-- Beinhaltet die Datei `config.php`, die die Konfiguration des Backends enthält.
