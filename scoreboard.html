@@ -62,6 +62,20 @@
       .friend-form button:hover {
         background-color: #45a049;
       }
+
+      .logout-btn {
+        padding: 8px 16px;
+        background-color: #ff4444;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+
+      .logout-btn:hover {
+        background-color: #cc0000;
+      }
     </style>
   </head>
   <body>
@@ -94,6 +108,7 @@
     <nav>
       <a href="profile.html">Profil</a>
       <a href="index.html">Startseite</a>
+      <button onclick="logout()" class="logout-btn">Logout</button>
     </nav>
 
     <script src="js/scoreboard.js"></script>
