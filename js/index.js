@@ -2,7 +2,7 @@
 (async function () {
   try {
     // We call protected.php to see if the user is logged in
-    const response = await fetch("api/protected.php", {
+    const response = await fetch("api/index.php", {
       // credentials: 'include', // uncomment if front-end & back-end are on different domains
     });
 

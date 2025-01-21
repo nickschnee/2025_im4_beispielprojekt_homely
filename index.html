@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Welcome</title>
+    <title>Protected Page</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Homely</h1>
-    <p>Welcome to the Homely demo page</p>
+    <h1>Protected Page</h1>
 
-    <a href="login.html">Login</a>
+    <!-- This is where we'll dynamically show the protected content -->
+    <div id="protectedContent"></div>
+
+    <button id="logoutBtn">Logout</button>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
