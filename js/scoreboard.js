@@ -55,5 +55,39 @@ async function loadScoreboard() {
   }
 }
 
+// Add friend function
+async function addFriend() {
+  const friendEmail = document.getElementById("friendEmail").value.trim();
+
+  if (!friendEmail) {
+    alert("Please enter your friend's email");
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/scoreboard/add_friend.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ friendEmail }),
+    });
+
+    const result = await response.json();
+
+    if (result.error) {
+      alert(result.error);
+      return;
+    }
+
+    alert("Friend added successfully!");
+    document.getElementById("friendEmail").value = "";
+    loadScoreboard(); // Reload the scoreboard
+  } catch (error) {
+    console.error("Error adding friend:", error);
+    alert("Failed to add friend");
+  }
+}
+
 // Load scoreboard when page loads
 document.addEventListener("DOMContentLoaded", loadScoreboard);
