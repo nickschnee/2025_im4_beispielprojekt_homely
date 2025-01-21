@@ -13,3 +13,11 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+
+h1 {
+  font-size: var(--type-size-h1);
+  line-height: var(--type-line-height-h1);
+  color: var(--color-neutral-text);
+  font-family: "Roboto Slab", serif;
+  margin: var(--spacing-xl);
+}
