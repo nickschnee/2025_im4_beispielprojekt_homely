@@ -48,7 +48,7 @@ async function loadTasks() {
       const button = document.createElement("button");
       button.className = "task-button";
       button.innerHTML = `
-                ${task.name} 
+                ${task.emoji} ${task.name} 
                 <span class="task-score">${task.score} points</span>
             `;
       button.onclick = () => completeTask(task.id);
