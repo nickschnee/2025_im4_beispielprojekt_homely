@@ -23,6 +23,10 @@ h1 {
   margin: var(--spacing-s);
 }
 
+a {
+  text-decoration: none;
+}
+
 .category-section {
   margin: none;
 }

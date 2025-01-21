@@ -63,3 +63,7 @@
   font-weight: 500;
   line-height: 48px;
 }
+
+.nav-link-active {
+  color: var(--color-primary-default);
+}
