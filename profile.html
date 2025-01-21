@@ -1,1 +1,74 @@
-<div></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
+    <style>
+      .profile-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .activities-container {
+        max-height: 500px;
+        overflow-y: auto;
+      }
+
+      .activity-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .activity-left {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .activity-date {
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      .score {
+        color: #4caf50;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-container">
+      <h1>Profil</h1>
+
+      <div class="profile-header">
+        <h2 id="userName">...</h2>
+        <div class="score" id="totalScore">...</div>
+      </div>
+
+      <h3>Letzte 10 Aktivitäten</h3>
+      <div class="activities-container" id="activitiesContainer">
+        <!-- Activities will be inserted here via JavaScript -->
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="scoreboard.html">Scoreboard</a>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </nav>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>
