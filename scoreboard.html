@@ -1,3 +1,58 @@
-<div>
-  <h1>Rangliste</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreboard</title>
+    <style>
+      .scoreboard-table {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+
+      .scoreboard-table th,
+      .scoreboard-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .scoreboard-table th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .scoreboard-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .scoreboard-table tr:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scoreboard</h1>
+    <table class="scoreboard-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Punkte</th>
+        </tr>
+      </thead>
+      <tbody id="scoreboard-body">
+        <!-- Data will be inserted here via JavaScript -->
+      </tbody>
+    </table>
+
+    <nav>
+      <a href="profile.html">Profil</a>
+      <a href="index.html">Startseite</a>
+    </nav>
+
+    <script src="js/scoreboard.js"></script>
+  </body>
+</html>
