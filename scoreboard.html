@@ -4,79 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scoreboard</title>
-    <style>
-      .scoreboard-table {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px auto;
-        border-collapse: collapse;
-      }
-
-      .scoreboard-table th,
-      .scoreboard-table td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-
-      .scoreboard-table th {
-        background-color: #4caf50;
-        color: white;
-      }
-
-      .scoreboard-table tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
-      .scoreboard-table tr:hover {
-        background-color: #ddd;
-      }
-
-      .friend-section {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-      }
-
-      .friend-form {
-        display: flex;
-        gap: 10px;
-      }
-
-      .friend-form input {
-        flex: 1;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-
-      .friend-form button {
-        padding: 8px 16px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      .friend-form button:hover {
-        background-color: #45a049;
-      }
-
-      .logout-btn {
-        padding: 8px 16px;
-        background-color: #ff4444;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-left: 10px;
-      }
-
-      .logout-btn:hover {
-        background-color: #cc0000;
-      }
-    </style>
+    <link rel="stylesheet" href="css/design_system.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/scoreboard.css" />
   </head>
   <body>
     <h1>Scoreboard</h1>
@@ -105,10 +36,14 @@
       </div>
     </div>
 
-    <nav>
-      <a href="profile.html">Profil</a>
-      <a href="index.html">Startseite</a>
-      <button onclick="logout()" class="logout-btn">Logout</button>
+    <nav class="nav">
+      <a href="/profile.html" class="nav-link"> Profil </a>
+
+      <a href="/index.html" class="nav-add-button">
+        <span class="nav-add-symbol">+</span>
+      </a>
+
+      <a href="/scoreboard.html" class="nav-link nav-link-active"> Liste </a>
     </nav>
 
     <script src="js/scoreboard.js"></script>
