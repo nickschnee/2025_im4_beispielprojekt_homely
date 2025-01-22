@@ -39,6 +39,14 @@ h3 {
   margin: var(--spacing-s);
 }
 
+h4 {
+  font-size: var(--type-size-h4);
+  line-height: var(--type-line-height-h4);
+  color: var(--color-neutral-text);
+  font-family: var(--type-family-heading);
+  margin: var(--spacing-s);
+}
+
 a {
   color: var(--color-neutral-text);
 }
