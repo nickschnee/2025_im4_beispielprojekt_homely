@@ -1,7 +1,7 @@
 // First check if user is authorized
 async function checkAuth() {
   try {
-    const response = await fetch("/api/index.php", {
+    const response = await fetch("/api/auth.php", {
       credentials: "include",
     });
 

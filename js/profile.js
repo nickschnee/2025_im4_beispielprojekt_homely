@@ -1,7 +1,7 @@
 // Check if user is logged in (reusing the same function we had before)
 async function checkAuth() {
   try {
-    const response = await fetch("/api/index.php", {
+    const response = await fetch("/api/auth.php", {
       credentials: "include",
     });
 
