@@ -1,5 +1,8 @@
 /* Login Container */
 .login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between header and form */
   background: white;
   padding: 20px;
   width: 100%;
@@ -12,22 +15,21 @@
 }
 
 /* Header and Brand */
-.login-header {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+.brand {
+  margin-top: 20px;
 }
 
 .brand-title {
   font-size: 32px;
   font-weight: bold;
   color: #19324c;
-  margin-bottom: 20px;
 }
 
 /* Form Styling */
 .login-form {
-  margin-top: 20px;
+  margin-top: auto;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .form-group {
