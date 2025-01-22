@@ -55,13 +55,15 @@ input {
   height: 50px;
   font-family: var(--type-family-body);
   color: var(--color-neutral-text);
+  border: 1px solid var(--color-neutral-line);
 }
 
 label {
+  display: block;
   font-family: var(--type-family-body);
   color: var(--color-neutral-text);
   font-weight: var(--type-weight-label);
-  padding-bottom: var(--spacing-s);
+  padding-bottom: var(--spacing-xxs);
 }
 
 .category-section {
