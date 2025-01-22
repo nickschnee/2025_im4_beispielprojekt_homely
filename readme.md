@@ -38,6 +38,6 @@ Um Homely auf dem eigenen Web-Server zu installieren, führe folgende Schritte a
 
 - Erstelle eine neue FTP Verbindung mit dem SFTP Plugin gemäss [Anleitung im MMP 101](https://github.com/Interaktive-Medien/101-MMP/blob/main/resources/sftp.md).
 
-# 🐛 Bug-Fixing
+# 🐛 Troubleshooting
 
 - Wenn du PHP-Dateien verschiebst oder umbenennst, musst du deinen Cache löschen, damit das Login weiterhin funktioniert. Im Zweifelsfall in privatem Tab testen.
