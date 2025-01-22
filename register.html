@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login_register.css" />
   </head>
   <body>
     <div class="login-container">
@@ -54,5 +55,20 @@
       </form>
     </div>
     <script src="js/register.js"></script>
+    <script>
+      document.fonts.ready.then(() => {
+        const robotoFont = document.fonts.check("1em Roboto");
+        const robotoSlabFont = document.fonts.check("1em 'Roboto Slab'");
+
+        if (!robotoFont || !robotoSlabFont) {
+          console.error("Fonts not loaded:", {
+            roboto: robotoFont,
+            robotoSlab: robotoSlabFont,
+          });
+        } else {
+          console.log("All fonts loaded successfully");
+        }
+      });
+    </script>
   </body>
 </html>

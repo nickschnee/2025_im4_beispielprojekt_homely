@@ -25,8 +25,8 @@
   --color-turquoise-700: #31998f;
   --color-turquoise-900: #16665e;
   /* string */
-  --type-family-body: Roboto;
-  --type-family-heading: Roboto Slab;
+  --type-family-body: "Roboto", sans-serif;
+  --type-family-heading: "Roboto Slab", serif;
   --type-weight-body: Regular;
   --type-weight-heading: Medium;
   --type-weight-label: Medium;
