@@ -29,14 +29,6 @@
   gap: 10px;
 }
 
-.friend-form input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  height: 50px;
-}
-
 .friend-form button {
   width: 100%;
   padding: 8px 16px;

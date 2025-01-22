@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: var(--type-family-body);
 }
 
 /* Body Styling */
@@ -41,6 +41,22 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 50px;
+  font-family: var(--type-family-body);
+  color: var(--color-neutral-text);
+}
+
+label {
+  font-family: var(--type-family-body);
+  color: var(--color-neutral-text);
+  margin-bottom: var(--spacing-s);
 }
 
 .category-section {
