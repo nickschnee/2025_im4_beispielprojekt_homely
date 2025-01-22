@@ -1,14 +1,18 @@
-# 🏠 Homely Beispiel-Projekt
+# 🧹 Homely Beispiel-Projekt
 
-> 🎨 Blablabla
+Dieses Repository beinhaltet das Beispiel-Projekt namens Homely für die Interaktiven Medien IV.
 
-Dieses Repository beinhaltet ein vollständiges, minimales Authenzifizierungs-System basierend auf PHP als Backend und HTML/CSS/JS als Frontend.
+# 🏁 Live - Version
 
-Es ermöglicht Benutzern das `Registrieren`, `Anmelden`, `Abmelden` und den Zugriff auf eine `geschützte Seite` nach erfolgreicher Authentifizierung.
+Du kannst Homely unter folgendem Link testen:
 
-## ⚙️ Installation
+[https://homely.crazy-internet.ch](https://homely.crazy-internet.ch)
 
-Um dieses Beispiel-Projekt auf dem eigenen Web-Server zu installieren, führe folgende Schritte aus:
+> 💌 füge `nick@homely.ch` oder `blub@blub.ch` zu Testzwecken deiner Freundesliste hinzu.
+
+## ⚙️ Installation auf eigenem Web-Server
+
+Um Homely auf dem eigenen Web-Server zu installieren, führe folgende Schritte aus:
 
 ### 1. Download
 
@@ -18,7 +22,7 @@ Um dieses Beispiel-Projekt auf dem eigenen Web-Server zu installieren, führe fo
 
 - Erstelle eine neue Datenbank bei deinem Hoster (z.B. [Infomaniak](https://www.infomaniak.com/de/support/faq/1981/mysqlmariadb-benutzer-und-datenbanken-verwalten)).
 
-- Importiere die Datei `system/database.sql` in die neue Datenbank, um die `users` Tabelle zu erstellen.
+- Importiere alle SQL Dateien im Ordner `system/` in die neue Datenbank, um die benötigten Tabellen zu erstellen.
 
 ### 3. Code
 
@@ -29,3 +33,7 @@ Um dieses Beispiel-Projekt auf dem eigenen Web-Server zu installieren, führe fo
 ### 4. FTP Connect
 
 - Erstelle eine neue FTP Verbindung mit dem SFTP Plugin gemäss [Anleitung im MMP 101](https://github.com/Interaktive-Medien/101-MMP/blob/main/resources/sftp.md).
+
+# 🐛 Bug-Fixing
+
+- Wenn du PHP-Dateien verschiebst oder umbenennst, musst du deinen Cache löschen, damit das Login weiterhin funktioniert. Im Zweifelsfall in privatem Tab testen.
