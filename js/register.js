@@ -9,7 +9,7 @@ document
     const password = document.getElementById("password").value.trim();
 
     try {
-      const response = await fetch("api/register.php", {
+      const response = await fetch("api/auth/register.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ name, email, password }),

@@ -1,7 +1,7 @@
 // Check if user is logged in (reusing the same function we had before)
 async function checkAuth() {
   try {
-    const response = await fetch("/api/auth.php", {
+    const response = await fetch("/api/auth/auth.php", {
       credentials: "include",
     });
 
@@ -79,7 +79,7 @@ async function loadProfile() {
 // Reuse logout function
 async function logout() {
   try {
-    await fetch("/api/logout.php");
+    await fetch("/api/auth/logout.php");
     window.location.href = "/login.html";
   } catch (error) {
     console.error("Logout failed:", error);

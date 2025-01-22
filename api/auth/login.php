@@ -5,7 +5,7 @@ ini_set('session.cookie_httponly', 1);
 session_start();
 header('Content-Type: application/json');
 
-require_once '../system/config.php';
+require_once '../../system/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = trim($_POST['email'] ?? '');

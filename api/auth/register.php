@@ -3,7 +3,7 @@
 session_start();
 header('Content-Type: application/json');
 
-require_once '../system/config.php';
+require_once '../../system/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name     = trim($_POST['name'] ?? '');

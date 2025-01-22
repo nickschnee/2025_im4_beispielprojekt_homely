@@ -1,7 +1,7 @@
 // First check if user is authorized
 async function checkAuth() {
   try {
-    const response = await fetch("/api/auth.php", {
+    const response = await fetch("/api/auth/auth.php", {
       credentials: "include",
     });
 
@@ -91,13 +91,3 @@ async function addFriend() {
 
 // Load scoreboard when page loads
 document.addEventListener("DOMContentLoaded", loadScoreboard);
-
-async function logout() {
-  try {
-    await fetch("/api/logout.php");
-    window.location.href = "/login.html";
-  } catch (error) {
-    console.error("Logout failed:", error);
-    alert("Logout failed");
-  }
-}
