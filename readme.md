@@ -1,5 +1,9 @@
 # 🧹 Homely Beispiel-Projekt
 
+![Static Badge](https://img.shields.io/badge/Sprache-PHP-%23f7df1e)
+![Static Badge](https://img.shields.io/badge/Kurs-MMP_IM4-blue)
+![Last Changed](https://img.shields.io/endpoint?url=https://badges.crazy-internet.ch/im4_homely.php)
+
 Dieses Repository beinhaltet das Beispiel-Projekt namens Homely für die Interaktiven Medien IV.
 
 # 🏁 Live - Version
