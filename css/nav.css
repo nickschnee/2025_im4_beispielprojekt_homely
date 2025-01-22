@@ -6,13 +6,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
   position: fixed;
   bottom: 30px;
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: #c9eaff;
 }
 
 .nav-link {

@@ -12,7 +12,6 @@ body {
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  padding: var(--spacing-l);
   font-family: var(--type-family-body);
 }
 
@@ -41,7 +40,11 @@ h3 {
 }
 
 a {
-  text-decoration: none;
+  color: var(--color-neutral-text);
+}
+
+p {
+  color: var(--color-neutral-text);
 }
 
 input {
@@ -57,7 +60,8 @@ input {
 label {
   font-family: var(--type-family-body);
   color: var(--color-neutral-text);
-  margin-bottom: var(--spacing-s);
+  font-weight: var(--type-weight-label);
+  padding-bottom: var(--spacing-s);
 }
 
 .category-section {
