@@ -42,6 +42,12 @@ async function loadScoreboard() {
     tbody.innerHTML = ""; // Clear existing scores
 
     scores.forEach((score, index) => {
+      console.log("Current row:", {
+        scoreEmail: score.email,
+        currentUserEmail: score.currentUserEmail,
+        isOwnProfile: score.email === score.currentUserEmail,
+      });
+
       const row = document.createElement("tr");
       row.innerHTML = `
         <td>${index + 1}</td>

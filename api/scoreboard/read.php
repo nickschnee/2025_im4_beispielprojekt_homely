@@ -25,6 +25,13 @@ try {
     $stmt->execute([$_SESSION['user_id'], $_SESSION['user_id']]);
     
     $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Add current user's email to each score row
+    $currentUserEmail = $_SESSION['email'];  // Make sure this exists in session
+    foreach ($scores as &$score) {
+        $score['currentUserEmail'] = $currentUserEmail;
+    }
+
     echo json_encode($scores);
 } catch(PDOException $e) {
     echo json_encode(['error' => 'Error loading scoreboard']);

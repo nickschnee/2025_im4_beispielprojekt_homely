@@ -44,20 +44,6 @@
   background-color: var(--color-blue-300);
 }
 
-.logout-btn {
-  padding: 8px 16px;
-  background-color: #ff4444;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.logout-btn:hover {
-  background-color: #cc0000;
-}
-
 .delete-checkbox {
   width: 20px;
   height: 20px;
@@ -78,12 +64,14 @@
 }
 
 .delete-column input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
   cursor: pointer;
 }
 
 .delete-column input[type="checkbox"]:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.btn-mitglied {
+  margin-top: 10px;
 }
