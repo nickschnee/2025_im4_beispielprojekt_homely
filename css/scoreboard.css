@@ -1,3 +1,7 @@
+.scoreboard-container {
+  margin: 20px;
+}
+
 .scoreboard-table {
   width: 100%;
   max-width: 600px;
@@ -9,7 +13,6 @@
 .scoreboard-table td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
 }
 
 .scoreboard-table th {
