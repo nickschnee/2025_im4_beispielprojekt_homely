@@ -73,14 +73,61 @@ async function loadScoreboard() {
   }
 }
 
-// Add friend function
-async function addFriend() {
-  const friendEmail = document.getElementById("friendEmail").value.trim();
+let searchTimeout;
 
-  if (!friendEmail) {
-    alert("Please enter your friend's email");
+document.getElementById("friendEmail").addEventListener("input", function (e) {
+  clearTimeout(searchTimeout);
+  const searchTerm = e.target.value.trim();
+
+  if (searchTerm.length < 2) {
+    document.getElementById("searchDropdown").style.display = "none";
     return;
   }
+
+  searchTimeout = setTimeout(async () => {
+    try {
+      const response = await fetch(
+        `/api/scoreboard/search_users.php?search=${encodeURIComponent(
+          searchTerm
+        )}`
+      );
+      const users = await response.json();
+
+      const dropdown = document.getElementById("searchDropdown");
+
+      if (users.length === 0) {
+        dropdown.style.display = "none";
+        return;
+      }
+
+      dropdown.innerHTML = users
+        .map(
+          (user) => `
+        <div class="search-dropdown-item" onclick="addFriend('${user.email}')">
+          <span class="search-dropdown-name">${user.name}</span>
+          <span class="search-dropdown-email">${user.email}</span>
+        </div>
+      `
+        )
+        .join("");
+
+      dropdown.style.display = "block";
+    } catch (error) {
+      console.error("Error searching users:", error);
+    }
+  }, 300);
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".friend-input-container")) {
+    document.getElementById("searchDropdown").style.display = "none";
+  }
+});
+
+// Update addFriend function to accept email parameter
+async function addFriend(friendEmail) {
+  if (!friendEmail) return;
 
   try {
     const response = await fetch("/api/scoreboard/add_friend.php", {
@@ -98,9 +145,10 @@ async function addFriend() {
       return;
     }
 
-    alert("Friend added successfully!");
+    alert("Mitglied erfolgreich hinzugefügt!");
     document.getElementById("friendEmail").value = "";
-    loadScoreboard(); // Reload the scoreboard
+    document.getElementById("searchDropdown").style.display = "none";
+    loadScoreboard();
   } catch (error) {
     console.error("Error adding friend:", error);
     alert("Failed to add friend");
