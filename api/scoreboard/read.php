@@ -11,14 +11,14 @@ if (!isset($_SESSION['user_id'])) {
 
 try {
     // Get scores for user and their friends
-    $query = "SELECT u.name, COALESCE(SUM(t.score), 0) as total_score 
+    $query = "SELECT u.name, u.email, COALESCE(SUM(t.score), 0) as total_score 
               FROM users u 
               LEFT JOIN user_has_task uht ON u.id = uht.user_id 
               LEFT JOIN tasks t ON uht.task_id = t.id 
               WHERE u.id = ? OR u.id IN (
                   SELECT friend_id FROM friendships WHERE user_id = ?
               )
-              GROUP BY u.name
+              GROUP BY u.name, u.email
               ORDER BY total_score DESC";
     
     $stmt = $pdo->prepare($query);

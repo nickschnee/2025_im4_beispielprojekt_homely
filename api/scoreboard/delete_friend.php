@@ -26,8 +26,10 @@ try {
         exit();
     }
 
-    // Delete friendship
-    $stmt = $pdo->prepare("DELETE FROM friendships WHERE (user_id = ? AND friend_id = ?) OR (user_id = ? AND friend_id = ?)");
+    // Delete friendship both ways
+    $stmt = $pdo->prepare("DELETE FROM friendships WHERE 
+        (user_id = ? AND friend_id = ?) OR 
+        (user_id = ? AND friend_id = ?)");
     $stmt->execute([
         $_SESSION['user_id'], $friend['id'],
         $friend['id'], $_SESSION['user_id']

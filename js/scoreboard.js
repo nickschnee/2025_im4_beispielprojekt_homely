@@ -24,25 +24,6 @@ async function checkAuth() {
   }
 }
 
-let isEditMode = false;
-
-function toggleEditMode() {
-  isEditMode = !isEditMode;
-  const addFriendForm = document.getElementById("addFriendForm");
-  const editButton = document.getElementById("editButton");
-  const deleteColumns = document.querySelectorAll(".delete-column");
-
-  if (isEditMode) {
-    addFriendForm.classList.remove("hidden");
-    editButton.textContent = "Fertig";
-    deleteColumns.forEach((col) => col.classList.remove("hidden"));
-  } else {
-    addFriendForm.classList.add("hidden");
-    editButton.textContent = "Mitglieder bearbeiten";
-    deleteColumns.forEach((col) => col.classList.add("hidden"));
-  }
-}
-
 // Function to load and display scoreboard
 async function loadScoreboard() {
   const isAuthorized = await checkAuth();
@@ -53,7 +34,7 @@ async function loadScoreboard() {
     const scores = await response.json();
 
     if (!scores || scores.error) {
-      console.error("Error loading scores:", scores.error);
+      console.error("Error loading scoreboard:", scores.error);
       return;
     }
 
@@ -66,13 +47,17 @@ async function loadScoreboard() {
         <td>${index + 1}</td>
         <td>${score.name}</td>
         <td>${score.total_score}</td>
-        <td class="delete-column ${!isEditMode ? "hidden" : ""}">
-          <button 
-            onclick="deleteFriend('${score.email}')"
-            class="delete-btn"
-            ${score.email === score.currentUserEmail ? "disabled" : ""}>
-            Löschen
-          </button>
+        <td class="delete-column">
+          ${
+            score.email === score.currentUserEmail
+              ? ""
+              : `<button 
+              onclick="deleteFriend('${score.email}', this)" 
+              class="delete-btn"
+            >
+              Löschen
+            </button>`
+          }
         </td>
       `;
       tbody.appendChild(row);
@@ -116,7 +101,7 @@ async function addFriend() {
   }
 }
 
-async function deleteFriend(friendEmail) {
+async function deleteFriend(friendEmail, buttonElement) {
   if (
     !confirm("Möchtest du dieses Mitglied wirklich aus deiner Liste entfernen?")
   ) {
@@ -139,11 +124,11 @@ async function deleteFriend(friendEmail) {
       return;
     }
 
-    alert("Mitglied wurde erfolgreich entfernt");
-    loadScoreboard(); // Refresh the list
+    // Remove the entire table row from the DOM
+    buttonElement.closest("tr").remove();
   } catch (error) {
     console.error("Error deleting friend:", error);
-    alert("Fehler beim Entfernen des Mitglieds");
+    alert("Failed to delete friend");
   }
 }
 

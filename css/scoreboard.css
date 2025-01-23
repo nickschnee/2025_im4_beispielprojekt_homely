@@ -58,26 +58,6 @@
   background-color: #cc0000;
 }
 
-.hidden {
-  display: none;
-}
-
-.edit-button {
-  width: 100%;
-  padding: 8px 16px;
-  background-color: var(--color-neutral-text);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-.edit-button:hover {
-  background-color: var(--color-blue-300);
-}
-
 .delete-checkbox {
   width: 20px;
   height: 20px;
@@ -85,7 +65,7 @@
 }
 
 .delete-btn {
-  padding: 4px 8px;
+  padding: 8px 16px;
   background-color: var(--color-status-error-background);
   border: 1px solid var(--color-status-error-border);
   color: var(--color-status-error-text);
@@ -95,4 +75,15 @@
 
 .delete-btn:hover {
   background-color: #ffcdd2;
+}
+
+.delete-column input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.delete-column input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
