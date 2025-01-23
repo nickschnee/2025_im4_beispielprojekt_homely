@@ -49,27 +49,21 @@ async function loadProfile() {
     }
 
     // Update user info
-    document.getElementById("userName").textContent = data.user.name;
-    document.getElementById("totalScore").textContent =
-      data.user.total_score + " Punkte";
+    document.getElementById("userName").value = data.user.name;
+    document.getElementById("totalScore").textContent = data.user.total_score;
 
     // Update activities
     const container = document.getElementById("activitiesContainer");
     container.innerHTML = "";
 
     data.activities.forEach((activity) => {
-      const div = document.createElement("div");
-      div.className = "activity-item";
-      div.innerHTML = `
-                <div class="activity-left">
-                    <div class="activity-date">${formatDate(
-                      activity.timestamp
-                    )}</div>
-                    <div>${activity.emoji} ${activity.name}</div>
-                </div>
-                <div class="score">+${activity.score}</div>
-            `;
-      container.appendChild(div);
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${formatDate(activity.timestamp)}</td>
+        <td>${activity.emoji} ${activity.name}</td>
+        <td class="score">+${activity.score}</td>
+      `;
+      container.appendChild(row);
     });
   } catch (error) {
     console.error("Error loading profile:", error);

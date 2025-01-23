@@ -47,6 +47,14 @@ h4 {
   margin: var(--spacing-s);
 }
 
+h5 {
+  font-size: var(--type-size-h5);
+  line-height: var(--type-line-height-h5);
+  color: var(--color-neutral-text);
+  font-family: var(--type-family-heading);
+  margin-bottom: var(--spacing-s);
+}
+
 a {
   color: var(--color-neutral-text);
 }
@@ -72,6 +80,15 @@ label {
   color: var(--color-neutral-text);
   font-weight: var(--type-weight-label);
   padding-bottom: var(--spacing-xxs);
+}
+
+th {
+  color: var(--color-neutral-text);
+  font-weight: var(--type-weight-body);
+}
+
+td {
+  color: var(--color-neutral-text);
 }
 
 .category-section {
