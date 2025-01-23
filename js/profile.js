@@ -81,5 +81,41 @@ async function logout() {
   }
 }
 
+// Update user name
+async function updateName() {
+  const nameInput = document.getElementById("userName");
+  const newName = nameInput.value.trim();
+
+  if (!newName) {
+    alert("Name cannot be empty");
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/profile/update.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: newName }),
+    });
+
+    const result = await response.json();
+
+    if (result.error) {
+      alert(result.error);
+      return;
+    }
+
+    alert("Name updated successfully!");
+  } catch (error) {
+    console.error("Error updating name:", error);
+    alert("Failed to update name");
+  }
+}
+
+// Add event listener for name input
+document.getElementById("userName").addEventListener("change", updateName);
+
 // Load profile when page loads
 document.addEventListener("DOMContentLoaded", loadProfile);
