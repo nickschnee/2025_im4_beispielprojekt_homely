@@ -1,7 +1,6 @@
 .profile-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .profile-header-row {
@@ -23,6 +22,7 @@
 .activities-table {
   width: 100%;
   border-collapse: collapse;
+  text-align: left;
 }
 
 .activities-table th {
@@ -31,7 +31,8 @@
 }
 
 .activities-table td {
-  padding: 12px;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 .score {
@@ -53,4 +54,5 @@
 
 .score-container {
   text-align: right;
+  margin-right: 18px;
 }
