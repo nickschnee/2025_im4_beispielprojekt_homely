@@ -23,6 +23,7 @@
           <th>#</th>
           <th>Name</th>
           <th>Punkte</th>
+          <th class="delete-column hidden">Aktion</th>
         </tr>
       </thead>
       <tbody id="scoreboard-body">
@@ -31,11 +32,17 @@
     </table>
 
     <div class="friend-section">
-      <h4>Mitglied hinzufügen</h4>
-      <div class="friend-form">
-        <label for="friendEmail">E-Mail</label>
-        <input type="email" id="friendEmail" placeholder="" />
-        <button onclick="addFriend()">Mitglied hinzufügen</button>
+      <button onclick="toggleEditMode()" id="editButton" class="edit-button">
+        Mitglieder bearbeiten
+      </button>
+
+      <div id="addFriendForm" class="friend-form hidden">
+        <h5>Mitglied hinzufügen</h5>
+        <div class="friend-input-group">
+          <label for="friendEmail">E-Mail</label>
+          <input type="email" id="friendEmail" placeholder="" />
+          <button onclick="addFriend()">Mitglied hinzufügen</button>
+        </div>
       </div>
     </div>
 

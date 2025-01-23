@@ -57,3 +57,42 @@
 .logout-btn:hover {
   background-color: #cc0000;
 }
+
+.hidden {
+  display: none;
+}
+
+.edit-button {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: var(--color-neutral-text);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.edit-button:hover {
+  background-color: var(--color-blue-300);
+}
+
+.delete-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 4px 8px;
+  background-color: var(--color-status-error-background);
+  border: 1px solid var(--color-status-error-border);
+  color: var(--color-status-error-text);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ffcdd2;
+}
